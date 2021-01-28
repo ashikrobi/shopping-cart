@@ -112,9 +112,11 @@
          // document.getElementById('case-amount').value = totalAmountCase; //set the new value into the form
          const changedQuantity = quantityChanger('case-amount');
          document.getElementById('case-amount').value = changedQuantity + 1;
-         let perCasePrice = parseFloat(document.getElementById('per-case-price').innerText);
-         let updatedPrice = perCasePrice + 59;
-         document.getElementById('per-case-price').innerText = updatedPrice;
+         // let perCasePrice = parseFloat(document.getElementById('per-case-price').innerText);
+         // let updatedPrice = perCasePrice + 59;
+         // document.getElementById('per-case-price').innerText = updatedPrice;
+         const casePriceUpdate = pricingControl('per-case-price') + 59;
+         document.getElementById('per-case-price').innerText = casePriceUpdate;
          
       })
       document.getElementById('decrease-case-amount').addEventListener('click', function(){
@@ -123,9 +125,11 @@
          // document.getElementById('case-amount').value = totalAmountCase; //set the new value into the form
          const changedQuantity = quantityChanger('case-amount');
          document.getElementById('case-amount').value = changedQuantity -1;
-         let perCasePrice = parseFloat(document.getElementById('per-case-price').innerText);
-         let updatedPrice = perCasePrice - 59;
-         document.getElementById('per-case-price').innerText = updatedPrice;
+         // let perCasePrice = parseFloat(document.getElementById('per-case-price').innerText);
+         // let updatedPrice = perCasePrice - 59;
+         // document.getElementById('per-case-price').innerText = updatedPrice;
+         const casePriceUpdate = pricingControl('per-case-price') - 59;
+         document.getElementById('per-case-price').innerText = casePriceUpdate;
       })
 
 
