@@ -98,9 +98,10 @@
          document.getElementById('sub-total').innerText = finalSubtotal;
 
          //control grand total for phone +ve button
-         const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
-         const grandTotal = initialGrandTotal + 1219;
-         document.getElementById('total').innerText = grandTotal;
+         // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
+         // const grandTotal = initialGrandTotal + 1219;
+         const grandTotal = grandTotalModifier('total');
+         document.getElementById('total').innerText = grandTotal + 1219;
          
 
       })
@@ -123,9 +124,11 @@
          document.getElementById('sub-total').innerText = finalSubtotal;
 
          //control grand total for phone -ve button
-         const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
-         const grandTotal = initialGrandTotal - 1219;
-         document.getElementById('total').innerText = grandTotal;
+         // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
+         // const grandTotal = initialGrandTotal - 1219;
+         // document.getElementById('total').innerText = grandTotal;
+         const grandTotal = grandTotalModifier('total');
+         document.getElementById('total').innerText = grandTotal - 1219;
 
       })
       // case selector
@@ -189,6 +192,12 @@
          let perUnitCost = parseFloat(document.getElementById(id).innerText);
          return perUnitCost;
          // let updatedPrice = perPhonePrice + 1219;
+      }
+
+      //grand total modifier
+      function grandTotalModifier(id) {
+         const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
+         return initialGrandTotal;
       }
 
    </script>
