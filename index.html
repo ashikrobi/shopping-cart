@@ -148,9 +148,11 @@
          document.getElementById('per-case-price').innerText = casePriceUpdate;
 
          //control subtotal for +ve button
-         const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
-         const finalSubtotal = initialSubtotal + 59;
-         document.getElementById('sub-total').innerText = finalSubtotal;
+         // const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
+         // const finalSubtotal = initialSubtotal + 59;
+         // document.getElementById('sub-total').innerText = finalSubtotal;
+         const subtotal = subTotalModifier('sub-total');
+         document.getElementById('sub-total').innerText = subtotal + 59;
 
          //control grand total for case +ve button
          // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
@@ -173,9 +175,11 @@
          document.getElementById('per-case-price').innerText = casePriceUpdate;
 
          //control subtotal for -ve button
-         const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
-         const finalSubtotal = initialSubtotal - 59;
-         document.getElementById('sub-total').innerText = finalSubtotal;
+         // const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
+         // const finalSubtotal = initialSubtotal - 59;
+         // document.getElementById('sub-total').innerText = finalSubtotal;
+         const subtotal = subTotalModifier('sub-total');
+         document.getElementById('sub-total').innerText = subtotal - 59;
 
          //control grand total for phone -ve button
          // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
