@@ -97,6 +97,12 @@
          const finalSubtotal = initialSubtotal + 1219;
          document.getElementById('sub-total').innerText = finalSubtotal;
 
+         //control grand total for phone +ve button
+         const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
+         const grandTotal = initialGrandTotal + 1219;
+         document.getElementById('total').innerText = grandTotal;
+         
+
       })
       document.getElementById('decrease-phone-amount').addEventListener('click', function(){
          // let initialPhoneAmount = parseFloat(document.getElementById('phone-amount').value); //number of phone form
@@ -115,6 +121,11 @@
          const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
          const finalSubtotal = initialSubtotal - 1219;
          document.getElementById('sub-total').innerText = finalSubtotal;
+
+         //control grand total for phone -ve button
+         const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
+         const grandTotal = initialGrandTotal - 1219;
+         document.getElementById('total').innerText = grandTotal;
 
       })
       // case selector
