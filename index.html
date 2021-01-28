@@ -150,9 +150,11 @@
          document.getElementById('sub-total').innerText = finalSubtotal;
 
          //control grand total for case +ve button
-         const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
-         const grandTotal = initialGrandTotal + 59;
-         document.getElementById('total').innerText = grandTotal;
+         // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
+         // const grandTotal = initialGrandTotal + 59;
+         // document.getElementById('total').innerText = grandTotal;
+         const grandTotal = grandTotalModifier('total');
+         document.getElementById('total').innerText = grandTotal + 59;
          
       })
       document.getElementById('decrease-case-amount').addEventListener('click', function(){
@@ -173,9 +175,11 @@
          document.getElementById('sub-total').innerText = finalSubtotal;
 
          //control grand total for phone -ve button
-         const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
-         const grandTotal = initialGrandTotal - 59;
-         document.getElementById('total').innerText = grandTotal;
+         // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
+         // const grandTotal = initialGrandTotal - 59;
+         // document.getElementById('total').innerText = grandTotal;
+         const grandTotal = grandTotalModifier('total');
+         document.getElementById('total').innerText = grandTotal - 59;
       })
 
 
