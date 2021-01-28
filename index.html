@@ -93,9 +93,10 @@
          //increase per unit price with 1219$
 
          //control subtotal for +ve button
-         const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
-         const finalSubtotal = initialSubtotal + 1219;
-         document.getElementById('sub-total').innerText = finalSubtotal;
+         // const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
+         // const finalSubtotal = initialSubtotal + 1219;
+         const subtotal = subTotalModifier('sub-total');
+         document.getElementById('sub-total').innerText = subtotal + 1219;
 
          //control grand total for phone +ve button
          // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
@@ -119,9 +120,11 @@
          //decrease price per negative click with $1219
 
          //control subtotal for -ve button
-         const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
-         const finalSubtotal = initialSubtotal - 1219;
-         document.getElementById('sub-total').innerText = finalSubtotal;
+         // const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
+         // const finalSubtotal = initialSubtotal - 1219;
+         // document.getElementById('sub-total').innerText = finalSubtotal;
+         const subtotal = subTotalModifier('sub-total');
+         document.getElementById('sub-total').innerText = subtotal - 1219;
 
          //control grand total for phone -ve button
          // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
@@ -196,6 +199,13 @@
          let perUnitCost = parseFloat(document.getElementById(id).innerText);
          return perUnitCost;
          // let updatedPrice = perPhonePrice + 1219;
+      }
+
+
+      //sub total modifier
+      function subTotalModifier(id) {
+         const initialSubtotal = parseFloat(document.getElementById(id).innerText)
+         return initialSubtotal;
       }
 
       //grand total modifier
