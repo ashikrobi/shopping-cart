@@ -81,18 +81,22 @@
    <script>
       //phone selector
       document.getElementById('increase-phone-amount').addEventListener('click', function(){
-         let initialPhoneAmount = parseFloat(document.getElementById('phone-amount').value); //number of phone form
-         let totalAmountPhone = initialPhoneAmount + 1; //increase the number with each button click
-         document.getElementById('phone-amount').value = totalAmountPhone; //set the new value into the form
+         // let initialPhoneAmount = parseFloat(document.getElementById('phone-amount').value); //number of phone form
+         // let totalAmountPhone = initialPhoneAmount + 1; //increase the number with each button click
+         // document.getElementById('phone-amount').value = totalAmountPhone; //set the new value into the form
+         const changedQuantity = quantityChanger('phone-amount');
+         document.getElementById('phone-amount').value = changedQuantity + 1;
          let perPhonePrice = parseFloat(document.getElementById('per-phone-price').innerText);
          let updatedPrice = perPhonePrice + 1219;
          document.getElementById('per-phone-price').innerText = updatedPrice;
          
       })
       document.getElementById('decrease-phone-amount').addEventListener('click', function(){
-         let initialPhoneAmount = parseFloat(document.getElementById('phone-amount').value); //number of phone form
-         let totalAmountPhone = initialPhoneAmount - 1; //decrease the number with each button click
-         document.getElementById('phone-amount').value = totalAmountPhone; //set the new value into the form
+         // let initialPhoneAmount = parseFloat(document.getElementById('phone-amount').value); //number of phone form
+         // let totalAmountPhone = initialPhoneAmount - 1; //decrease the number with each button click
+         // document.getElementById('phone-amount').value = totalAmountPhone; //set the new value into the form
+         const changedQuantity = quantityChanger('phone-amount');
+         document.getElementById('phone-amount').value = changedQuantity -1;
          let perPhonePrice = parseFloat(document.getElementById('per-phone-price').innerText);
          let updatedPrice = perPhonePrice - 1219;
          document.getElementById('per-phone-price').innerText = updatedPrice;
@@ -115,6 +119,11 @@
          let updatedPrice = perCasePrice - 59;
          document.getElementById('per-case-price').innerText = updatedPrice;
       })
+      function quantityChanger (id) {
+         let initialAmount = parseFloat(document.getElementById(id).value); //number of phone form
+         // let total = initialAmount + 1; //increase the number with each button click
+         return initialAmount;
+      }
    </script>
 </body>
 
