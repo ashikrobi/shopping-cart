@@ -103,18 +103,22 @@
       })
       // case selector
       document.getElementById('increase-case-amount').addEventListener('click', function(){
-         let initialCaseAmount = parseFloat(document.getElementById('case-amount').value); //number of case form
-         let totalAmountCase = initialCaseAmount + 1; //increase the number with each button click
-         document.getElementById('case-amount').value = totalAmountCase; //set the new value into the form
+         // let initialCaseAmount = parseFloat(document.getElementById('case-amount').value); //number of case form
+         // let totalAmountCase = initialCaseAmount + 1; //increase the number with each button click
+         // document.getElementById('case-amount').value = totalAmountCase; //set the new value into the form
+         const changedQuantity = quantityChanger('case-amount');
+         document.getElementById('case-amount').value = changedQuantity + 1;
          let perCasePrice = parseFloat(document.getElementById('per-case-price').innerText);
          let updatedPrice = perCasePrice + 59;
          document.getElementById('per-case-price').innerText = updatedPrice;
          
       })
       document.getElementById('decrease-case-amount').addEventListener('click', function(){
-         let initialCaseAmount = parseFloat(document.getElementById('case-amount').value); //number of case form
-         let totalAmountCase = initialCaseAmount - 1; //decrease the number with each button click
-         document.getElementById('case-amount').value = totalAmountCase; //set the new value into the form
+         // let initialCaseAmount = parseFloat(document.getElementById('case-amount').value); //number of case form
+         // let totalAmountCase = initialCaseAmount - 1; //decrease the number with each button click
+         // document.getElementById('case-amount').value = totalAmountCase; //set the new value into the form
+         const changedQuantity = quantityChanger('case-amount');
+         document.getElementById('case-amount').value = changedQuantity -1;
          let perCasePrice = parseFloat(document.getElementById('per-case-price').innerText);
          let updatedPrice = perCasePrice - 59;
          document.getElementById('per-case-price').innerText = updatedPrice;
