@@ -80,6 +80,8 @@
 
    <script>
       //phone selector
+      const phoneUnitPrice = 1219;
+      const caseUnitPrice = 59;
       document.getElementById('increase-phone-amount').addEventListener('click', function(){
          // let initialPhoneAmount = parseFloat(document.getElementById('phone-amount').value); //number of phone form
          // let totalAmountPhone = initialPhoneAmount + 1; //increase the number with each button click
@@ -88,7 +90,7 @@
          document.getElementById('phone-amount').value = changedQuantity + 1;
          // let perPhonePrice = parseFloat(document.getElementById('per-phone-price').innerText);
          // let updatedPrice = perPhonePrice + 1219;
-         const phonePriceUpdate = pricingControl('per-phone-price') + 1219;
+         const phonePriceUpdate = pricingControl('per-phone-price') + phoneUnitPrice;
          document.getElementById('per-phone-price').innerText = phonePriceUpdate;
          //increase per unit price with 1219$
 
@@ -96,13 +98,13 @@
          // const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
          // const finalSubtotal = initialSubtotal + 1219;
          const subtotal = subTotalModifier('sub-total');
-         document.getElementById('sub-total').innerText = subtotal + 1219;
+         document.getElementById('sub-total').innerText = subtotal + phoneUnitPrice;
 
          //control grand total for phone +ve button
          // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
          // const grandTotal = initialGrandTotal + 1219;
          const grandTotal = grandTotalModifier('total');
-         document.getElementById('total').innerText = grandTotal + 1219;
+         document.getElementById('total').innerText = grandTotal + phoneUnitPrice;
          
 
       })
@@ -115,7 +117,7 @@
          // let perPhonePrice = parseFloat(document.getElementById('per-phone-price').innerText);
          // let updatedPrice = perPhonePrice - 1219;
          // document.getElementById('per-phone-price').innerText = updatedPrice;
-         const phonePriceUpdate = pricingControl('per-phone-price') - 1219;
+         const phonePriceUpdate = pricingControl('per-phone-price') - phoneUnitPrice;
          document.getElementById('per-phone-price').innerText = phonePriceUpdate;
          //decrease price per negative click with $1219
 
@@ -124,14 +126,14 @@
          // const finalSubtotal = initialSubtotal - 1219;
          // document.getElementById('sub-total').innerText = finalSubtotal;
          const subtotal = subTotalModifier('sub-total');
-         document.getElementById('sub-total').innerText = subtotal - 1219;
+         document.getElementById('sub-total').innerText = subtotal - phoneUnitPrice;
 
          //control grand total for phone -ve button
          // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
          // const grandTotal = initialGrandTotal - 1219;
          // document.getElementById('total').innerText = grandTotal;
          const grandTotal = grandTotalModifier('total');
-         document.getElementById('total').innerText = grandTotal - 1219;
+         document.getElementById('total').innerText = grandTotal - phoneUnitPrice;
 
       })
       // case selector
@@ -144,7 +146,7 @@
          // let perCasePrice = parseFloat(document.getElementById('per-case-price').innerText);
          // let updatedPrice = perCasePrice + 59;
          // document.getElementById('per-case-price').innerText = updatedPrice;
-         const casePriceUpdate = pricingControl('per-case-price') + 59;
+         const casePriceUpdate = pricingControl('per-case-price') + caseUnitPrice;
          document.getElementById('per-case-price').innerText = casePriceUpdate;
 
          //control subtotal for +ve button
@@ -152,14 +154,14 @@
          // const finalSubtotal = initialSubtotal + 59;
          // document.getElementById('sub-total').innerText = finalSubtotal;
          const subtotal = subTotalModifier('sub-total');
-         document.getElementById('sub-total').innerText = subtotal + 59;
+         document.getElementById('sub-total').innerText = subtotal + caseUnitPrice;
 
          //control grand total for case +ve button
          // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
          // const grandTotal = initialGrandTotal + 59;
          // document.getElementById('total').innerText = grandTotal;
          const grandTotal = grandTotalModifier('total');
-         document.getElementById('total').innerText = grandTotal + 59;
+         document.getElementById('total').innerText = grandTotal + caseUnitPrice;
          
       })
       document.getElementById('decrease-case-amount').addEventListener('click', function(){
@@ -171,7 +173,7 @@
          // let perCasePrice = parseFloat(document.getElementById('per-case-price').innerText);
          // let updatedPrice = perCasePrice - 59;
          // document.getElementById('per-case-price').innerText = updatedPrice;
-         const casePriceUpdate = pricingControl('per-case-price') - 59;
+         const casePriceUpdate = pricingControl('per-case-price') - caseUnitPrice;
          document.getElementById('per-case-price').innerText = casePriceUpdate;
 
          //control subtotal for -ve button
@@ -179,14 +181,14 @@
          // const finalSubtotal = initialSubtotal - 59;
          // document.getElementById('sub-total').innerText = finalSubtotal;
          const subtotal = subTotalModifier('sub-total');
-         document.getElementById('sub-total').innerText = subtotal - 59;
+         document.getElementById('sub-total').innerText = subtotal - caseUnitPrice;
 
          //control grand total for phone -ve button
          // const initialGrandTotal = parseFloat(document.getElementById('total').innerText)
          // const grandTotal = initialGrandTotal - 59;
          // document.getElementById('total').innerText = grandTotal;
          const grandTotal = grandTotalModifier('total');
-         document.getElementById('total').innerText = grandTotal - 59;
+         document.getElementById('total').innerText = grandTotal - caseUnitPrice;
       })
 
 
