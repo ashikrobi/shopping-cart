@@ -129,6 +129,11 @@
          // document.getElementById('per-case-price').innerText = updatedPrice;
          const casePriceUpdate = pricingControl('per-case-price') + 59;
          document.getElementById('per-case-price').innerText = casePriceUpdate;
+
+         //control subtotal for +ve button
+         const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
+         const finalSubtotal = initialSubtotal + 59;
+         document.getElementById('sub-total').innerText = finalSubtotal;
          
       })
       document.getElementById('decrease-case-amount').addEventListener('click', function(){
@@ -142,6 +147,11 @@
          // document.getElementById('per-case-price').innerText = updatedPrice;
          const casePriceUpdate = pricingControl('per-case-price') - 59;
          document.getElementById('per-case-price').innerText = casePriceUpdate;
+
+         //control subtotal for -ve button
+         const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
+         const finalSubtotal = initialSubtotal - 59;
+         document.getElementById('sub-total').innerText = finalSubtotal;
       })
 
 
