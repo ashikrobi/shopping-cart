@@ -64,9 +64,9 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$1,278</h5>
-                        <h5>$0</h5>
-                        <h5>$1,278</h5>
+                        <h5>$<span id="sub-total">1278</span></h5>
+                        <h5>$<span id="tax">0</span></h5>
+                        <h5>$<span id="total">1278</span></h5>
                      </div>
                   </div>
                </div>
@@ -91,6 +91,12 @@
          const phonePriceUpdate = pricingControl('per-phone-price') + 1219;
          document.getElementById('per-phone-price').innerText = phonePriceUpdate;
          //increase per unit price with 1219$
+
+         //control subtotal for +ve button
+         const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
+         const finalSubtotal = initialSubtotal + 1219;
+         document.getElementById('sub-total').innerText = finalSubtotal;
+
       })
       document.getElementById('decrease-phone-amount').addEventListener('click', function(){
          // let initialPhoneAmount = parseFloat(document.getElementById('phone-amount').value); //number of phone form
@@ -104,6 +110,12 @@
          const phonePriceUpdate = pricingControl('per-phone-price') - 1219;
          document.getElementById('per-phone-price').innerText = phonePriceUpdate;
          //decrease price per negative click with $1219
+
+         //control subtotal for -ve button
+         const initialSubtotal = parseFloat(document.getElementById('sub-total').innerText)
+         const finalSubtotal = initialSubtotal - 1219;
+         document.getElementById('sub-total').innerText = finalSubtotal;
+
       })
       // case selector
       document.getElementById('increase-case-amount').addEventListener('click', function(){
