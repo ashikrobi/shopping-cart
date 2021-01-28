@@ -86,10 +86,11 @@
          // document.getElementById('phone-amount').value = totalAmountPhone; //set the new value into the form
          const changedQuantity = quantityChanger('phone-amount');
          document.getElementById('phone-amount').value = changedQuantity + 1;
-         let perPhonePrice = parseFloat(document.getElementById('per-phone-price').innerText);
-         let updatedPrice = perPhonePrice + 1219;
-         document.getElementById('per-phone-price').innerText = updatedPrice;
-         
+         // let perPhonePrice = parseFloat(document.getElementById('per-phone-price').innerText);
+         // let updatedPrice = perPhonePrice + 1219;
+         const phonePriceUpdate = pricingControl('per-phone-price') + 1219;
+         document.getElementById('per-phone-price').innerText = phonePriceUpdate;
+         //increase per unit price with 1219$
       })
       document.getElementById('decrease-phone-amount').addEventListener('click', function(){
          // let initialPhoneAmount = parseFloat(document.getElementById('phone-amount').value); //number of phone form
@@ -97,9 +98,12 @@
          // document.getElementById('phone-amount').value = totalAmountPhone; //set the new value into the form
          const changedQuantity = quantityChanger('phone-amount');
          document.getElementById('phone-amount').value = changedQuantity -1;
-         let perPhonePrice = parseFloat(document.getElementById('per-phone-price').innerText);
-         let updatedPrice = perPhonePrice - 1219;
-         document.getElementById('per-phone-price').innerText = updatedPrice;
+         // let perPhonePrice = parseFloat(document.getElementById('per-phone-price').innerText);
+         // let updatedPrice = perPhonePrice - 1219;
+         // document.getElementById('per-phone-price').innerText = updatedPrice;
+         const phonePriceUpdate = pricingControl('per-phone-price') - 1219;
+         document.getElementById('per-phone-price').innerText = phonePriceUpdate;
+         //decrease price per negative click with $1219
       })
       // case selector
       document.getElementById('increase-case-amount').addEventListener('click', function(){
@@ -123,11 +127,23 @@
          let updatedPrice = perCasePrice - 59;
          document.getElementById('per-case-price').innerText = updatedPrice;
       })
+
+
+      //control phone or case quantity
       function quantityChanger (id) {
          let initialAmount = parseFloat(document.getElementById(id).value); //number of phone form
          // let total = initialAmount + 1; //increase the number with each button click
          return initialAmount;
       }
+
+
+      //pricing controller
+      function pricingControl(id) {
+         let perUnitCost = parseFloat(document.getElementById(id).innerText);
+         return perUnitCost;
+         // let updatedPrice = perPhonePrice + 1219;
+      }
+
    </script>
 </body>
 
